@@ -1,10 +1,16 @@
 from turtle import Turtle, Screen
+import time
 
 minna = Turtle()
 screen = Screen()
 
 screen.listen()
-screen.bgpic('bg.jpg')
+screen.setup(600,400)
+time.sleep(2)
+screen.bgpic("back_image.gif")
+screen.update()
+#screen.bgcolor('cyan')
+
 
 
 def move_forwards():
@@ -39,7 +45,6 @@ screen.onkey(fun=move_circle_right, key='e')
 screen.onkey(fun=move_circle_left, key='q')
 
 screen.onkey(fun=clear_screen, key='c')
-
 
 
 screen.exitonclick()
