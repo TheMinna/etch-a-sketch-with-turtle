@@ -1,12 +1,10 @@
 from turtle import Turtle, Screen
-import time
 
 minna = Turtle()
 screen = Screen()
 
 screen.listen()
 screen.setup(600,400)
-time.sleep(2)
 screen.bgpic("back_image.gif")
 screen.update()
 #screen.bgcolor('cyan')
@@ -17,10 +15,14 @@ def move_forwards():
     minna.forward(5)
 
 def turn_right():
-    minna.right(5)
+    #minna.right(5)
+    new_heading = minna.heading() + 5
+    minna.setheading(new_heading)
 
 def turn_left():
-    minna.left(5)
+    #minna.left(5)
+    new_heading = minna.heading() - 5
+    minna.setheading(new_heading)
 
 def move_backwards():
     minna.backward(5)
